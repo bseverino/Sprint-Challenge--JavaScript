@@ -34,11 +34,25 @@ Edit this document to include your answers after each question. Make sure to lea
 
 2. What is the difference between a function and a method?
 
+A function can be called on its own, while a method is assigned to an object and must be called with said object.
+
 3. What is closure?
+
+Closure is the idea that a function can look outside of it's own scope for context, but cannot look inside any of its own child functions.
 
 4. Describe the four rules of the 'this' keyword.
 
+When used on the global scope, 'this' refers to the window, or returns 'undefined' when using strict mode.
+
+When using implicit binding, 'this' refers to the element that is to the left of the dot when being called.
+
+When using explicit binding, you use '.call', '.apply', or '.bind' to explicitly state what 'this' is referring to.
+
+When using new binding, you use 'new' to construct a new object, which is then what 'this' refers to.
+
 5. Why do we need super() in an extended class?
+
+'super()' allows the parent properties to be passed down to its child.
 
 ## Project Set up
 
