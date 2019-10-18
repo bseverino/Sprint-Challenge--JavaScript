@@ -7,9 +7,7 @@
   * The consume function should return the invocation of cb, passing a and b into cb as arguments
 */
 
-const consume = (a, b, cb) => {
-  return cb(a, b);
-}
+const consume = (a, b, cb) => cb(a, b);
 
 
 /* Step 2: Create several functions to callback with consume();
@@ -18,17 +16,11 @@ const consume = (a, b, cb) => {
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
 
-const add = (a, b) => {
-  return a + b;
-}
+const add = (a, b) => a + b;
 
-const multiply = (a, b) => {
-  return a * b;
-}
+const multiply = (a, b) => a * b;
 
-const greeting = (a, b) => {
-  return `Hello ${a} ${b}, nice to meet you!`;
-}
+const greeting = (a, b) => `Hello ${a} ${b}, nice to meet you!`;
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
 console.log(consume(2, 2, add)); // 4
@@ -40,7 +32,7 @@ console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice t
 
 // Explain in your own words why nestedfunction can access the variable internal.
 
-// Explanation: Because of closure, a function can look outside of it's own scope for context. Since internal is above nestedFunction in scope, nestedFunction can use that variable.
+// Explanation: Because of closure, a function can look outside of its own scope for context. Since internal is above nestedFunction in scope, nestedFunction can use that variable.
 
 
 const external = "I'm outside the function";
